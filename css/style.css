@@ -1,0 +1,1193 @@
+/* ================= HEADER (CLEAN) ================= */
+.header {
+  position: relative;
+  z-index: 1050;
+}
+
+/* Navbar spacing */
+.navbar-spacing {
+  padding: 0 80px;
+}
+
+@media (max-width: 991px) {
+  .navbar-spacing {
+    padding: 0 20px;
+  }
+}
+
+/* Logo */
+.logo-header {
+  font-size: 30px;
+  font-weight: 800;
+  color: #016630;
+}
+
+/* Desktop Navbar Layout */
+@media (min-width: 992px) {
+
+  /* Disable offcanvas behavior */
+  .offcanvas {
+    position: static;
+    transform: none;
+    visibility: visible !important;
+    background: transparent;
+    width: auto;
+  }
+
+  .offcanvas-header {
+    display: none;
+  }
+
+  .offcanvas-body {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+/* Mobile Offcanvas */
+@media (max-width: 991px) {
+  .offcanvas {
+    background: white;
+  }
+  .offcanvas-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+  }
+
+  .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .offcanvas .search-input, 
+  .offcanvas .search-btn {
+    width: 100%;
+  }
+}
+
+
+  /* Center menu */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+  /* Search */
+.search-wrapper {
+  position: relative;
+}
+.search-input {
+  width: 220px;
+  height: 45px;
+}
+
+  
+/* magnify-symbol */
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+/* Button */
+.search-btn {
+    width: 150px;
+    height: 49px;
+    white-space: nowrap;
+    background: linear-gradient(to bottom, #032E15, #016630) !important;
+    box-shadow: none !important;
+    color: white;
+    border-radius: 505px;
+    padding: 16px 28px 16px 28px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   gap: 8px;   /* space between icon & text */
+    
+  
+}
+
+
+
+/* ================= HERO SECTION ================= */
+
+.bg-container {
+  /* Use a cropped or focused image for mobile if available */
+  background-image: url("https://res.cloudinary.com/dchveeguh/image/upload/v1765715248/12fac48c6538ab6d7d8141a165d9e6b51676f545_jqtwcz.png");
+  background-size: cover;
+  
+  /* IMPORTANT: Anchoring to the right keeps the bottle visible on skinny screens */
+  background-position: right center; 
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  text-align: left;
+  
+  padding: 0 20px;
+}
+
+/* 2. Tablet Breakpoint (768px and up) */
+@media (min-width: 768px) {
+  .bg-container {
+    /* You can use a slightly wider version here */
+    background-position: 80% center; 
+  }
+}
+
+/* 3. Desktop Breakpoint (1024px and up) */
+@media (min-width: 1024px) {
+  .bg-container {
+    /* Original desktop view */
+    background-position: center; 
+  }
+}
+.card-container {
+  max-width: 692px;
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: flex-start;
+  text-align: left;
+}
+@media (max-width: 576px) {
+  .card-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .card-container {
+    max-width: 100%;
+    padding-top: 8vh;
+    align-items: flex-start;
+    text-align: left;
+    
+  }
+}
+.card-container > * {
+  width: 100%;
+}
+
+
+/* Award button */
+.award-btn {
+  max-width: 356px;
+  padding: 8px 16px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10000px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(to bottom, #032E15, #016630);
+  white-space: normal;
+}
+
+.award-color {
+  color: white;
+}
+
+
+/* Headings */
+.section-header {
+  
+  font-weight: 700;
+  max-width: 100%;
+  color: #032E15;
+  font-size: clamp(28px, 6vw, 56px);
+  line-height: 1.1;
+}
+
+
+
+/* ================= REVIEWS ================= */
+.reviews {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .reviews {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+
+.perfume-power {
+  font-size: 50px;
+  font-weight: 700;
+  color: #016630;
+  max-width: 80%;
+}
+
+.perfume-caption {
+  font-size: 22px;
+  font-weight: 300;
+  color: #016630;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    font-size: 36px;
+  }
+
+  .perfume-power {
+    font-size: 48px;
+  }
+}
+@media (max-width: 576px) {
+  .section-header {
+    font-size: 28px;
+  }
+
+  .perfume-power {
+    font-size: 40px;
+  }
+}
+
+
+
+/* ================= SHOP BUTTON ================= */
+.shop-btn {
+  height: 48px;
+  padding: 12px 16px;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  font-weight: 500;
+  padding: 12px 16px;
+  background: linear-gradient(to bottom, #032E15, #016630);
+  width: fit-content;
+  align-self: flex-start;
+}
+@media (max-width: 576px) {
+  .shop-btn {
+    align-self: center;
+  }
+}
+
+
+
+
+/* ================= BOTTLE SECTION ================= */
+
+
+.product-page-section {
+  padding: 40px 20px;
+ 
+}
+
+.bottle-container {
+  width: 100%;       
+  max-width: 610px;  
+  height: auto;     
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  height: 450px; 
+  background-color: #f9f9f9; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ 
+}
+
+.main-perfume-img {
+  width: 100%;
+  height: 100%; 
+  display: block;
+  object-fit: cover; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* UI Elements */
+.arrow-left, .arrow-right {
+  position: absolute;
+  bottom: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.arrow-left { left: 15px; }
+.arrow-right { right: 15px; }
+
+.arrow-left i, .arrow-right i {
+  font-size: 38px;
+  color: #000;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot i { font-size: 14px; color: #999; }
+.dot.active i { color: #016630; }
+
+/* Thumbnails Grid */
+.thumbnails-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 15px;
+}
+
+.thumb-item {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s;
+}
+
+.thumb-item:hover {
+  transform: scale(1.05);
+  border-color:black;
+}
+
+
+/* right column */
+
+
+.right-content-wrapper{
+  width: 100%;
+ 
+  height: auto; 
+
+}
+.right-section{
+  width: 100%;      
+  height: auto;
+}
+
+.sub-head{
+  font-weight: 600;
+  font-size: 36px;
+  color: #032E15;
+}
+
+.star-size{
+  font-size: 20px;
+  color: #00C950;
+}
+
+.sub-para{
+  color: #032E15;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+
+.small-card-container {
+  width: 100%;
+  height: 44px;
+  margin-top: 12px;
+
+  
+  background: linear-gradient(
+    to right,
+    #00C950,
+    #008236,
+    #032E15
+  );
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+  border-radius: 4px;
+  border: 1px solid #00C950;
+}
+
+.para-caption {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+
+/* single subscription  */
+
+.single-card-container{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+ 
+ 
+  border-radius: 6px;
+}
+/* row layout */
+.card-row {
+  display: flex;
+  align-items: center;
+   flex-wrap: nowrap;
+}
+.single-btn-dot{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.single-para{
+ margin: 0;
+  font-size: 20px;
+  color: #032E15;
+  white-space: nowrap;
+
+}
+
+.single-btn-dot i{
+  font-size: 14px; color: #00C950;
+}
+
+.single-btn-dot.active i { 
+  color: #016630; 
+}
+
+#single-toggle-icon {
+  color: #00C950;
+}
+
+#single-toggle-icon.active {
+  color: #016630;
+}
+
+
+
+.items{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+.price{
+  font-size: 20px;
+  font-weight: 700;
+  font-style: bold;
+
+ 
+
+
+}
+.wrong-price{
+  font-size: 20px;
+  color: #B8B8B8;
+  text-decoration: line-through;
+ 
+}
+/* Base class for collapsible content */
+.subscription-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease;
+  padding-bottom: 0px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #9a9a9a;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.small-para{
+  font-size: 16px;
+  color: #032E15;
+  margin-left: 20px;
+  
+
+  
+}
+.perfume-color{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Choose a Fragrance */
+
+.img-container{
+  width: 127px;
+  height: 152px;
+  background-color: white;
+  margin-left: 20px;
+   
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;        
+  padding-top: 8px;
+  position: relative; 
+}
+.btn-design{
+   position: absolute;  
+
+  top: -10px;           
+  right: -10px;
+
+  width: 110px;
+  height: 20px;
+
+  background: linear-gradient(to bottom, #032E15, #016630);
+  font-weight: 700;
+  color: white;
+  border: none;
+
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;            
+  align-items: center;        
+  justify-content: center;
+}
+.top-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 6px;
+}
+
+
+.small-single-btn-dot{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 6px;
+  
+}
+
+.small-single-btn-dot i{
+  font-size: 10px; 
+  color: #00C950;
+}
+
+.small-single-btn-dot.active i { 
+  color: #016630; 
+}
+
+.original-head{
+  font-size: 15px;
+  color: #919798;
+  margin: 0;
+}
+
+.small-img-size{
+  width: 200px;
+  height: 180px;
+  margin-top: 12px;
+
+  object-fit: contain;
+}
+
+
+
+
+
+.single-container{
+  width: 410px;
+  height: 180px;
+}
+
+
+
+
+
+
+/* Utility class to show content */
+.subscription-content.show-content {
+  max-height: 5000px; 
+  opacity: 1;
+  overflow: visible; 
+  padding-bottom: 20px;
+}
+
+
+
+
+/* What's Included section */
+.multiple-containers{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.days-container{
+  width: 166px;
+  height: 220px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;        
+  padding-top: 8px;
+  margin-left: 20px;
+
+}
+
+.original-head-30{
+  font-size: 15px;
+  color: #919798;
+ 
+
+}
+.small-img-size-1{
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 55px;
+  max-height: 150px;
+}
+
+.perfume-collect-container{
+  width: 328px;
+  height: 220px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  display: flex;              
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.design-para{
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.imgs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.small-img{
+  width: 100px;
+  height: 150px;
+  object-fit: contain;
+  
+  
+
+}
+ 
+/* offers section */
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.icon-text i {
+  color: #6f8f7a; 
+  
+
+}
+
+.icon-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #032E15;
+}
+
+.special-design{
+  margin: 0;
+  font-size: 14px;
+  color: #032E15;
+  font-weight: bold;
+}
+
+
+
+
+/*.double-card-container.active-sub .double-btn-dot i/* 
+  
+
+
+/*  different break points */
+@media (max-width: 767px) {
+  .right-content-wrapper {
+    margin-top: 10px;
+  }
+
+  .perfume-color,
+  .multiple-containers {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  
+  .days-container,
+  .perfume-collect-container {
+    margin-left: 0;
+  }
+  .product-page-section {
+    padding: 20px 15px; 
+  }
+  
+  .img-container {
+    margin-left: 0;     
+    width: 30%;         
+  }
+  .img-wrapper {
+    height: 600px;
+  }
+}
+ 
+
+
+/* double subscription  */
+.double-card-container{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  
+  min-height: 60px; 
+}
+
+/* double open closing */
+.double-btn-dot{
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.double-btn-dot i{
+  font-size: 14px; color: #00C950;
+}
+
+
+.double-toggle-icon {
+  color: #00C950;
+}
+
+.double-toggle-icon.active {
+  color: #016630;
+}
+
+/* add to cart button */
+
+.add-cart-btn{
+  width: 100%;
+  height: 53px;
+  background: linear-gradient(to bottom, #032E15, #016630);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  border: none;
+  margin-top: 30px;
+  min-width: unset;
+}
+
+
+/* our collection */
+
+.collection-head{
+  font-size: 36px;
+  font-weight: 700;
+  color: #032E15;
+}
+
+.singnature-card-container{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.scents-sub-head{
+  color: #032E15;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.icon{
+  font-size: 26px;
+  font-weight: bold;
+  color: #032E15;
+}
+.inside-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.scents-para{
+  color: #666666;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 10px;
+  margin: 10px;
+  display: none;
+}
+.perfume-check-img{
+  width: 100%;
+  max-width: 590px;
+  height: auto;
+  border-radius: 24px;
+}
+
+@media (max-width: 767px) {
+
+  .row {
+    row-gap: 10px;
+  }
+
+  .collection-head {
+    margin-bottom: 12px;
+  }
+
+  .singnature-card-container {
+    margin-top: 10px;
+  }
+
+  .perfume-check-img {
+    margin-top: 10px;
+  }
+}
+
+
+/* percentage section */
+
+.percentage-section{
+  background: linear-gradient(to bottom, #032E15, #016630);
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 40px;             
+  padding: 40px;
+  box-sizing: border-box;
+  
+}
+
+.percentage-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;     
+  width: 250px;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
+}
+
+.percentage-head{
+  font-size: 40px;        
+  font-weight: 700;
+  color: white;
+  margin: 0 0 10px 0;      
+  font-family: sans-serif;
+}
+
+.percentage-para{
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0.9;           
+  font-family: sans-serif;
+}
+/* You could even add a slight hover effect to the numbers */
+.percentage-items:hover .percentage-head {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* table section */
+
+.ifans{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #032E15;
+  font-size: 40px;
+}
+
+.choice-head{
+  font-size: 36px;
+  color: #032E15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* table */
+.compare-table {
+  width: 85%;
+  border-collapse: collapse;
+  margin: 40px auto; 
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.compare-table th,
+.compare-table td {
+  border-bottom: 1px solid #d0d0d0;
+  padding: 14px;
+}
+.compare-table th:first-child {
+  text-align: left;
+  padding-left: 20px;
+  color: #555;
+  font-weight: 600;
+}
+.compare-table td:nth-child(2),
+.compare-table th:nth-child(2) {
+  background-color: #eef9f2;
+}
+
+
+.compare-table th:first-child {
+  text-align: left;
+}
+
+
+.table-img-size{
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+}
+
+
+.correct{
+  width: 40px;
+  height: 40px;
+  background-color: #032E15;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.wrong{
+  color: #000;
+  font-size: 25px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.risk-btn{
+  background: linear-gradient(to bottom, #032E15, #016630);
+  color: white;
+  border-radius: 24px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+}
+.risk-btn:hover {
+  opacity: 0.9;
+}
+
+/* footer section */
+
+.footer{
+  background: linear-gradient(to bottom, #032E15, #016630);
+  padding: 80px 60px;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+/* GTG up */
+.footer-col:nth-child(1){
+  margin-top: -30px;
+}
+
+/* Menu columns */
+.footer-col:nth-child(2),
+.footer-col:nth-child(3){
+  margin-top: 20px;
+}
+
+/* Social icons slightly lower */
+.footer-col:nth-child(4){
+  margin-top: 35px;
+}
+
+/* Newsletter aligned with menu */
+.footer-newsletter{
+  margin-top: 20px;
+}
+
+
+.footer-head{
+  font-size: 42px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-items{
+  color: #fff;
+  font-size: 18px;
+}
+
+.social-item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.social-item i{
+  font-size: 26px;
+}
+
+.footer-newsletter{
+  max-width: 420px;
+}
+
+.join-para{
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.subscribe-box{
+  display: flex;
+  gap: 10px;
+  color: white;
+}
+
+
+.subscribe-box input{
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 12px;
+  color: white;
+}
+
+.subscribe-box ::placeholder{
+  color: white;
+}
+.subscribe-box button{
+  background: #7a4a10;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+}
+
+.subscription-para{
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (max-width: 900px){
+  .footer-container{
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.active i {
+  color: #016630 !important;
+}
+
+.active p {
+  color: #016630 !important;
+  font-weight: 600;
+}

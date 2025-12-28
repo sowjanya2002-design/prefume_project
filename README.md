@@ -3,7 +3,7 @@ A sleek and elegant web application designed to showcase luxury fragrances. This
 
 
 🚀 Live Demo
-You can view the live website here: https://sowjanya2002-design.github.io/prefume_project/
+You can view the live website here: https://sowjanya2002-design.github.io/perfume_project/
 
 🛠️ Technologies Used
 HTML5: For the structure of the website.
